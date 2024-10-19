@@ -1,184 +1,361 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" 
-    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./style.css">
-    <link href="https://fonts.cdnfonts.com/css/amazon-ember" rel="stylesheet">
-    <title>My Resume</title>
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Frankly Interpreting</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        header {
+            background: #232F3E;
+            color: white;
+            padding: 1rem 0;
+            width: 100%;
+        }
+
+        .badge-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 1rem;
+        }
+
+        .badge-container img {
+            width: 180px;
+            max-width: 50%;
+            
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info a {
+            color: lightblue;
+            text-decoration: none;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        main {
+            padding: 2rem 0;
+        }
+
+        section {
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .job-title, .edu-cert-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 0.5rem;
+        }
+
+        .job-title h3, .job-title h4, .edu-title {
+            margin-right: 1rem;
+        }
+
+        .date, .edu-date {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        ul {
+            list-style-type: square;
+            padding-left: 1.5rem;
+        }
+
+        footer {
+            background: #f4f4f4;
+            padding: 1rem 0;
+            text-align: center;
+            border-top: 1px solid #ddd;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .badge-container img {
+                width: 120px;
+            }
+
+            .job-title, .edu-cert-item {
+                flex-direction: column;
+            }
+
+            .date, .edu-date {
+                margin-top: 0.25rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 10px;
+            }
+
+            h1 {
+                font-size: 1.75rem;
+            }
+
+            .badge-container img {
+                width: 100px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
 <body>
-    <div class="resume-header">
-        <div class="container my-5 title">
-            <div class="text-center">
-                <h1 class="mb-3">Danny Frank, MBA, NIC</h1>
-                <img class ="image" src = "../images/CCP_AWS.png" height="100px" alt="AWS Certification Badge">
-                <img class ="image" src = "..//images/RID_Cert.png" height="100px" alt="Certified ASL Interpeter Badge">
-            </br>
-                <a button type="button" class="btn btn-dark btn-sm px-4 me-md-2" href="../index.html">Home</button></a>
-                <a button type="button" class="btn btn-dark btn-sm px-4 me-md-2" href="mailto:frank.danielj@gmail.com">Contact Me</button></a>
-                <a button type="button" class="btn btn-dark btn-sm px-4 me-md-2" href="https://www.linkedin.com/in/danny-frank/">LinkedIn</button></a>
+    <header>
+        <div class="badge-container">
+            <!-- Replace # with the actual URL to verify the certification -->
+            <a href="https://www.credly.com/badges/50c36929-2629-4df1-9d19-ce3fa801ad38/linked_in_profile" target="_blank"><img src="/CCP_AWS.png" alt="AWS Cloud Practitioner Badge"></a>
+            <a href="https://www.credly.com/badges/8ec83d49-6a14-495c-bef1-cabf0ddacafd" target="_blank"><img src="/AWS_AIP(1).png" alt="AWS AI Practitioner Badge"></a>
+            <a href="https://www.credly.com/badges/b352fec6-75e7-42a1-b234-b9f607e2588d" target="_blank"><img src="/SAA_AWS.png" alt="AWS Solutions Architect Associate Badge"></a>
+            <a href="https://www.credly.com/badges/e990abbe-ec1a-411c-ad42-8c5a92179b2e/linked_in_profile" target="_blank"><img src="/RID_Cert.png" alt="RID NIC Badge"></a>
+        </div>
+        <div class="container">
+            <h1>Danny Frank, MBA, NIC</h1>
+            <div class="contact-info">
+                Email: <a href="mailto:frankly.dan@gmail.com">frankly.dan@gmail.com</a><br/>
+                LinkedIn: <a href="https://www.linkedin.com/in/danny-frank/">linkedin.com/in/danny-frank/</a>
             </div>
+            <nav>
+                <ul>
+                    <li><a href="./homepage.html">Home</a></li>
+                    <li><a href="#summary">Summary</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#education">Education & Certification</a></li>
+                </ul>
+            </nav>
         </div>
-    </div>
-    
-    <div class="container my-5">
-        <!-- The rest of your resume content goes here -->
-        <div class="mb-4">
-            <h2>Summary</h2>
-            <hr />
-            <p>Experienced Program Manager with a track record of driving operational excellence and enhancing customer satisfaction. Over the past 3.5 years, have served as a high-performing Strategic Program Manager, leading cross-functional teams, optimizing vendor operations, and implementing technology solutions for process enhancement. Comfortable translating complex technical concepts into actionable insights for diverse stakeholders. Committed to driving continuous improvement and team success in delivering innovative cloud solutions aligned with customer goals.</p>
-        </div>
-        <div class="mb-4">
-            <h2>Technical Skills</h2>
-            <hr />
-            <ul class="list-unstyled">
-                <li><strong>AWS Cloud Practitioner:</strong> Demonstrating foundational knowledge of AWS cloud services and concepts essential for guiding customers in their cloud adoption journey.</li>
-                <li><strong>Process Automation:</strong> Implementing automations using tools like Smartsheet and Zapier to improve operational efficiency and streamline data workflows.</li>
-                <li><strong>Data Analysis:</strong> Proficient in Excel for advanced data analysis, including formulas, data visualization, and pivot tables.</li>
-                <li><strong>Salesforce:</strong> Experienced in tracking and analyzing accommodations data within Salesforce, skilled in exporting reports for comprehensive analysis.</li>
-                <li><strong>SQL and Python:</strong> Beginner-level proficiency with SQL and Python, committed to expanding skills through ongoing learning and practice.</li>
-            </ul>
-        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section id="summary">
+                <h2>Summary</h2>
+                <p>Customer-centric Engagement Manager with over 3.5 years of experience driving operational excellence and enhancing customer
+                     satisfaction. Proven success in leading cross-functional teams, optimizing vendor operations, 
+                     and translating technical concepts into actionable business outcomes. Adept at managing customer relationships, delivering 
+                     innovative solutions, and aligning projects with strategic goals. Committed to continuous improvement and delivering 
+                     measurable results for cloud-based engagements.
+                </p>
+            </section>
         
-            <div class="mb-4">
-                <h2>Experience</h2>
-                <hr />
-                <div class="mb-3">
-                    <h3>Amazon</h3>
-                    <div class="d-flex justify-content-between">
-                        <h4>Vendor Operations Manager</h4>
-                        <p class="text-muted">October 2022 - Present</p>
-                    </div>
-                    <ul>
-                        <li>Orchestrated the design and implementation of tooling solutions across multiple projects, centralizing communication and vendor engagement for eight vendors, resulting in improved operational efficiency.</li>
-                        <li>Implemented best practices for vendors, driving alignment with Amazon operations and enhancing customer satisfaction.</li>
-                        <li>Managed the launch of an OnDemand Video Remote Interpreting service, significantly increasing service availability and supporting a broad customer base.</li>
-                        <li>Achieved a 68% reduction in vendor travel expenses year to date by leveraging Smartsheet and automation to create a travel approval process.</li>
-                        <li>Provided ASL interpreting services for key AWS events, enhancing customer experience and accessibility.</li>
-                        <li>Led strategic business reviews with vendors and internal stakeholders, analyzing performance metrics and fostering collaborative partnerships to drive contract renewals and satisfaction.</li>
-                    </ul>
-                </div>
-                <div class="mb-3">
-                    <h3>Student Association for Interpreter Development</h3>
-                    <div class="d-flex justify-content-between">
-                        <h4>Program Manager, Co-Founder</h4>
-                        <p class="text-muted">June 2008 - June 2022</p>
-                    </div>
-                    <ul>
-                        <li>Developed and launched a student internship program providing over 35,700 hours of pro bono ASL interpreting services, benefiting the Deaf and Hard of Hearing community.</li>
-                        <li>Created a scheduling platform, reducing scheduling time by 50% and improving service delivery efficiency.</li>
-                        <li>Mentored student interpreters, providing training on industry standards and best practices.</li>
-                        <li>Engaged with local communities and educational institutions to support the internship program.</li>
-                    </ul>
-                </div>
-            </div>
-    
-            <div class="mb-4">
-                <h2>Education & Certifications</h2>
-                <hr />
-                <div class="container mt-5">
-                  <div class="row">
-                    <!-- First row: Grand Canyon University, University of Minnesota, Riverside City College -->
-                    <div class="col-md-4 mb-4">
-                      <div class="card h-100">
-                        <div class="card-body">
-                          <h4 class="card-title">Grand Canyon University</h4>
-                          <p class="card-text">MBA - Masters of Business Administration</p>
-                          <p class="card-text"><small class="text-muted">2021</small></p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100">
-                          <div class="card-body">
-                            <h4 class="card-title">Riverside City College</h4>
-                            <p class="card-text">Associate of Arts - Liberal Arts and Sciences</p>
-                            <p class="card-text"><small class="text-muted">2009</small></p>
-                          </div>
-                        </div>
-                      </div>
-                    <div class="col-md-4 mb-4">
-                      <div class="card h-100">
-                        <div class="card-body">
-                          <h4 class="card-title">University of Minnesota</h4>
-                          <p class="card-text">Bachelor of Arts - Communication Studies</p>
-                          <p class="card-text"><small class="text-muted">2005</small></p>
-                        </div>
-                      </div>
-                    </div>
+            <section id="skills">
+                <h2>Technical Skills</h2>
+                <ul>
+                    <li><b>AWS Cloud Practitioner:</b>Demonstrating foundational knowledge of AWS cloud services and concepts essential for advising 
+                        customers.</li> 
+                    <li><b>AWS AI Practitioner:</b>Strong theoretical understanding of AWS AI and machine learning services, including their applications 
+                        in automating processes and enhancing decision-making.</li>
+                    <li><b>AWS Solutions Architect Assocaite: </b>Demonstrating in-depth knowledge of designing and deploying scalable, highly available, 
+                        and fault-tolerant systems on AWS.</li>
+                    <li><b>Data Analysis:</b>Proficient in leveraging data and metrics to inform decision-making, including the use of tools like Smartsheet 
+                        and Excel for advanced analysis.</li>
                     
-                  </div>
-              
-                  <!-- Second row: Certifications -->
-                  <div class="row mt-4">
-                    <div class="col-md-4 mb-4">
-                      <div class="card h-100">
-                        <div class="card-body">
-                          <h4 class="card-title">AWS Certified Solutions Architect – Associate</h4>
-                          <p class="card-text">Amazon Web Services (AWS)</p>
-                          <p class="card-text"><small class="text-muted">In progress</small></p>
-                        </div>
-                      </div>
+                  
+                </ul>
+            </section>
+
+            <section id="experience">
+                <h2>Professional Experience</h2>
+
+                <article>
+                    <div class="job-title">
+                        <h3>Amazon</h3>
+                        <span class="date">October 2022 - Present</span>
                     </div>
-                    <div class="col-md-4 mb-4">
-                      <div class="card h-100">
-                        <div class="card-body">
-                          <h4 class="card-title">Project Management - Certificate</h4>
-                          <p class="card-text">Google</p>
-                          <p class="card-text"><small class="text-muted">Issued 2024</small></p>
-                        </div>
-                      </div>
+                    <h4>Program Manager, Vendor Operations</h4>
+                    <ul>
+                        <li>Served as a customer-facing advocate, orchestrating the design and implementation of tooling solutions across multiple projects to 
+                            centralize communication, enhance vendor engagement, and improve operational efficiency.</li>
+                        <li>Launched an on-demand video remote interpreting service, significantly increasing service availability and supporting a diverse 
+                            customer base of Deaf, Hard of Hearing, and hearing individuals.
+                        </li>
+                        <li>Achieved a 68% reduction in vendor travel expenses through the implementation of a travel approval process leveraging Smartsheet and 
+                            automation.
+                        </li>
+                        <li>Provided American Sign Language (ASL) interpreting services to facilitate communication and ensure accessibility for both internal 
+                            Amazon employees during their daily work duties, recruiting events, and at key AWS events.
+                        </li>
+                        <li>Consulted on vendor contracts, ensuring alignment with ASL interpreting standards and Amazon’s objectives.</li>
+                        <li>Led strategic business reviews with vendors and internal stakeholders, analyzing performance metrics and fostering collaborative 
+                            partnerships to drive contract renewals and customer satisfaction.
+                        </li>
+                    </ul>
+                </article>
+                <article>
+                    <div class="job-title">
+                        <h4>ASL Interpreter Business Partner</h4>
+                        <span class="date"> December 2020 - October 2022</span>
                     </div>
-                    <div class="col-md-4 mb-4">
-                      <div class="card h-100">
-                        <div class="card-body">
-                          <h4 class="card-title">AWS Certified Cloud Practitioner</h4>
-                          <p class="card-text">Amazon Web Services</p>
-                          <p class="card-text"><small class="text-muted">Issued 2021</small></p>
-                        </div>
-                      </div>
+                    <ul>
+                        <li> Delivered high-quality, customer-facing American Sign Language interpreting services for various AWS events, including AWS On Air, 
+                            AWS Summits, AWS Pie Day, and AWS Training and Certification, enhancing accessibility and inclusivity.</li>
+                        <li> Presented leadership trainings on creating inclusive workplaces for Deaf and Hard of Hearing employees.</li>
+                        <li> Consulted with site leadership to deliver technical solutions aimed at achieving site accommodation and accessibility goals.</li>
+                        <li> Influenced strategic business decisions by delivering data-driven insights regarding vendor performance in key markets.</li>
+                        <li> Coordinated logistics for interpreting services, including scheduling, equipment setup, and technical troubleshooting.</li>
+                        <li> Fostered a culture of inclusion by advocating for accessible communication solutions across the organization.</li>
+                    </ul>
+                </article>
+                <article>
+                    <h3>Frankly Interpreting Services</h3>
+                    <div class="job-title">
+                        <h4>Owner</h4>
+                        <span class="date"> June 2009 - Present</span>
                     </div>
-                    <div class="col-md-4 mb-4">
-                      <div class="card h-100">
-                        <div class="card-body">
-                          <h4 class="card-title">Scrum Master Certification</h4>
-                          <p class="card-text">Scrum Alliance</p>
-                          <p class="card-text"><small class="text-muted">Issued 2021 (Lapsed)</small></p>
-                        </div>
-                      </div>
+                    <ul>
+                        <li> Provided comprehensive American Sign Language interpreting services for a variety of settings, including medical, educational, and corporate 
+                            environments.</li>
+                        <li> Collaborated with clients and consumers to ensure effective communication and understanding, facilitating successful interactions and outcomes.</li>
+                        <li> Maintained accurate and confidential records of interpreting assignments, adhering to ethical and professional standards.</li>
+                        <li> Participated in ongoing professional development activities to enhance interpreting skills and knowledge.</li>
+                </article>  
+                <article>
+                    <h3>Student Association for Interpreter Development</h3>
+                    <div class="job-title">
+                        <h4>Co-Founder, Program Director</h4>
+                        <span class="date">June 2008 - June 2022</span>
                     </div>
-                    <div class="col-md-4 mb-4">
-                      <div class="card h-100">
-                        <div class="card-body">
-                          <h4 class="card-title">Python for Everybody</h4>
-                          <p class="card-text">Coursera</p>
-                          <p class="card-text"><small class="text-muted">Issued 2017</small></p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                      <div class="card h-100">
-                        <div class="card-body">
-                          <h4 class="card-title">National Interpreter Certification (NIC)</h4>
-                          <p class="card-text">Registry of Interpreters for the Deaf (RID)</p>
-                          <p class="card-text"><small class="text-muted">Issued 2011</small></p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                    <ul>
+                        <li> Developed and launched a state-funded internship program, in partnership with a community college in Riverside, California, providing 
+                            over 35,700 hours of pro bono ASL interpreting services.</li>
+                        <li> Collaborated with academic institutions and professional organizations to establish partnerships and create opportunities for students.</li>
+                        <li> Created and maintained scheduling platforms using Google Sheets and Forms, later migrating to Amazon Web Services to support scaling with 
+                            organizational growth. Migration resulted in a 50% increase in scheduling efficiency.</li>
+                        <li> Created a scheduling platform, reducing scheduling time by 50% and improving service delivery efficiency to better meet customer needs.
+                        </li>
+                        <li> Mentored and supervised student interpreters, providing guidance, feedback, and support to help them achieve their professional goals.</li>
+                        <li> Advocated for the rights and needs of Deaf and Hard of Hearing individuals, promoting inclusive practices and policies within the community.</li>
+                        <li> Mentored student interpreters, providing training on industry standards and best practices.
+                        </li>
+                    </ul>
+                </article>
+                
+            </section>
+
+            <section id="education">
+                <h2>Education & Certification</h2>
+                <div class="edu-cert-item">
+                    <p class="edu-title">Masters Business Administration</p>
+                    <p class="edu-date">Grand Canyon University, 2021</p>
                 </div>
-              </div>
-              
-              <div class="container">
-                <footer class="py-3 my-4">
-                  <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-                    <li class="nav-item"><a href="../index.html" class="nav-link px-2 text-body-secondary">Home</a></li>
-                  </ul>
-                  <p class="text-center text-body-secondary">© 2024 Danny Frank</p>
-                </footer>
-              </div>
-              
+                <div class="edu-cert-item">
+                    <p class="edu-title">Bachelor Of Arts - Communication Studies</p>
+                    <p class="edu-date">University of Minnesota, 2005</p>
+                </div>
+                <div class="edu-cert-item">
+                    <p class="edu-title">AWS - Solutions Architect Associate</p>
+                    <p class="edu-date">Amazon Web Services, 2024</p>
+                </div>
+                <div class="edu-cert-item">
+                    <p class="edu-title">AWS - Certified AI Practitioner</p>
+                    <p class="edu-date">Amazon Web Services, 2024</p>
+               
+                </div>
+                <div class="edu-cert-item">
+                    <p class="edu-title">Project Management - Certificate</p>
+                    <p class="edu-date">Google, 2024</p>
+                </div>
+                <div class="edu-cert-item">
+                    <p class="edu-title">AWS - Cloud Practitioner</p>
+                    <p class="edu-date">Amazon Web Services, 2021</p>
+                </div>
+                <div class="edu-cert-item">
+                    <p class="edu-title">Python for Everybody</p>
+                    <p class="edu-date">Coursera, 2018</p>
+                </div>
+                <div class="edu-cert-item">
+                    <p class="edu-title">National Interpreter Certificate</p>
+                    <p class="edu-date">RID, 2011</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; Frankly Interpreting LLC. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button id="back-to-top" aria-label="Back to the top">Top</button>
+    <script>
+        // Get the button
+        let backToTopButton = document.getElementById("back-to-top");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        backToTopButton.addEventListener("click", function() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        });
+    </script>
+</body>
+</html>
