@@ -20,7 +20,7 @@ body {
 }
 
 .col-lg-6 {
-    color: #E2DAD6;
+    color: black;
 }
 
 .profile-img {
@@ -33,6 +33,7 @@ body {
     height: 100%;
     width: 100%;
     overflow: hidden;
+    
 }
 
 html {
