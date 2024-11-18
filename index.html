@@ -19,7 +19,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                        <a class="nav-link active" aria-current="page" href="https://www.franklyinterpreting.com">Home</a>
                         <a class="nav-link" href="#about-me">About</a>
                         <a class="nav-link" href="./items/index.html">Resume</a>
                         <a class="nav-link" href="#portfolio">Portfolio</a>
@@ -39,7 +39,7 @@
                     <h1 class="display-5 fw-bold lh-1 mb-3">Danny Frank</h1>
                     <p class="lead">Personal Website - More to come</p>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                        <a button type="button" class="btn btn-light btn-lg px-4 me-md-2" href="mailto:frankly.dan@gmail.com">Contact Me</button></a>
+                        <a button type="button" class="btn btn-light btn-lg px-4 me-md-2" href="">Contact Me</button></a>
                     </div>
                 </div>
             </div>
@@ -50,7 +50,7 @@
         <div class="p-5 text-center bg-body-tertiary">
             <div class="container py-5">
                 <h2 class="text-body-emphasis">Hello</h2>
-                <img class="profile-img my-5" src="./images/profile-pic.jpeg" alt="me">
+                <img class="profile-img my-5" src="./images/danny_hat.jpeg" alt="me">
                 <p class="col-lg-8 mx-auto lead mt-2">
                     I am a web developer and the founder of Frankly Interpreting, a consulting business
                     specializing in process improvements and technology implementation for American Sign Language
@@ -69,12 +69,12 @@
                 <div class="row row-cols-1 row-cols-sm-2">
                     <div class="col">
                         <div class="card shadow-">
-                            <img src="./images/tin-dog.png" class="card-img-top" alt="TinDog">
+                            <img src="./images/drumkit.png" class="card-img-top" alt="DrumKit Project">
                             <div class="card-body">
-                                <p class="card-text">Designed a website for a company, "Tindog", using Bootstrap components and CSS styling to customize the website to the customer's business requirements.</p>
+                                <p class="card-text">Designed web application that uses HTML, CSS, and JavaScript to create an interactive virtual drum set, allowing users to play sounds by clicking buttons or pressing corresponding keyboard keys.</p>
                                 <div class="d-flex justify-content-center align-items-center">
                                     <div class="btn-group">
-                                        <a button type="button" class="btn btn-dark btn-sm px-4 me-md-2" href="../11.3 TinDog Project/index.html">View</button></a>
+                                        <a button type="button" class="btn btn-dark btn-sm px-4 me-md-2" href="./Drum Kit Starting Files/index.html">View</button></a>
                                     </div>
                                 </div>
                             </div>
@@ -93,6 +93,33 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="./images/simonGame.png" class="card-img-top" alt="Simon Game">
+                            <div class="card-body">
+                                <p class="card-text">Designed a web-based memory game that uses HTML, CSS, and JavaScript to recreate the classic Simon game, where players repeat an increasingly complex sequence of colors and sounds.</p>
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <div class="btn-group">
+                                        <a button type="button" class="btn btn-dark btn-sm px-4 me-md-2" href="./Simon Game Challenge Starting Files/index.html">View</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="./images/comingSoon2.png" class="card-img-top" alt="Coming soon">
+                            <div class="card-body">
+                                <p class="card-text">More project and updates, coming soon!</p>
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <div class="btn-group">
+                                        <a button type="button" class="btn btn-dark btn-sm px-4 me-md-2" href="">View</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -108,4 +135,14 @@
             </ul>
             <p class="text-center text-body-secondary">© 2024 Company, Inc</p>
         </footer>
-   
+</body>
+<script>
+    //When someone clicks the email button, alert the user that this option in not live at this time.
+    document.addEventListener("DOMContentLoaded", function(){
+    const emailButton = document.querySelector('#contact .btn-secondary');
+    emailButton.addEventListener('click', function(e) {
+        e.preventDefault(); // Prevents any default behavior
+        alert("Email functionality is not available at this time. Please check back later.");
+    });
+});
+</script> 
