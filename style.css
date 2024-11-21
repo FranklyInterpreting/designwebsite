@@ -1,62 +1,175 @@
-body {
-    background-color: white;
-    font-family: 'Amazon Ember', sans-serif;
-}
-
-.resume-header {
-    background-color: #6482AD;
-    padding: 20px 0;
-}
-
-.container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.title {
-    background-color: #6482AD;
-    text-align: center;
-}
-
-.col-lg-6 {
-    color: #E2DAD6;
-}
-
-.profile-img {
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 20px;
-}
-
-.card {
-    height: auto;
-    margin-bottom: 20px;
-    width: 100%;
-    overflow: hidden;
-}
-
-.card > img {
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
+/* Global Styles */
+:root {
+    --primary-color: #232F3E;     /* AWS dark blue */
+    --secondary-color: #FF9900;   /* AWS orange */
+    --accent-color: #4285F4;      /* Google blue */
+    --light-bg: #f8f9fa;
+    --dark-text: #232F3E;
+    --light-text: #ffffff;
+    --hover-color: #0078D4;       /* Microsoft blue */
+    --card-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --transition-speed: 0.3s;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-family: 'Amazon Ember', 'Segoe UI', Arial, sans-serif;
+
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #1a237e 100%);
+    color: var(--light-text);
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.4rem;
+    opacity: 0.9;
+}
+
+/* Cards */
+.card {
+    background: white;
+    border-radius: 8px;
+    border: none;
+    box-shadow: var(--card-shadow);
+    transition: transform var(--transition-speed) ease, 
+                box-shadow var(--transition-speed) ease;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
 .card-img-top {
     width: 100%;
     height: 200px;
-    object-fit: contain;
-    object-position: center;
-    padding: 10px;
+    object-fit: cover;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .card-body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;
+    padding: 1.5rem;
+}
+
+/* Profile Section */
+.profile-img {
+    height: 200px;
+    width: 200px;
+    border-radius: 25%;
+    border: 4px solid var(--secondary-color);
+    box-shadow: var(--card-shadow);
+    margin-bottom: 20px;
+    transition: transform var(--transition-speed) ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+}
+
+/* Resume Section */
+.resume-header {
+    background-color: var(--primary-color);
+    padding: 40px 0;
+    color: var(--light-text);
+}
+
+.title {
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    text-align: center;
+    padding: 2rem 0;
+    color: var(--light-text);
+}
+
+/* Buttons */
+.btn {
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all var(--transition-speed) ease;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: var(--hover-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    padding: 2rem 0;
+    margin-top: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .profile-img {
+        height: 120px;
+        width: 120px;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
 }
